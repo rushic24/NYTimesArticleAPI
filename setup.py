@@ -1,15 +1,16 @@
 from distutils.core import setup
+import NYTimesArticleAPI as nytapi
 
 setup(
-    name='nytimesarticle',
-    version='0.1.0',
-    author='Evan Sherlock',
-    author_email='egsherlock@gmail.com',
-    py_modules=['nytimesarticle'],
-    url='http://github.com/evansherlock/nytimesarticle',
-    license='LICENSE.txt',
-    description='Fully-functional Python wrapper for the New York Times Article Search API',
-    long_description=open('README.txt').read(),
+    name='NYTimesArticleAPI',
+    version=nytapi.__version__,
+    author='Matt Morrison',
+    author_email='mattdmo@pigimal.com',
+    py_modules=['NYTimesArticleAPI'],
+    url='https://github.com/MattDMo/NYTimesArticleAPI',
+    license='LICENSE',
+    description='Python wrapper for the New York Times Article Search API',
+    long_description=open('README.rst').read(),
     install_requires=[
         "requests >= 2.1.0",
     ],
