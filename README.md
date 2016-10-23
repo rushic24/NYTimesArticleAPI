@@ -1,6 +1,6 @@
 # NYTimesArticleAPI
 
-`NYTimesArticleAPI` is a fully-functional Python wrapper for the [New York Times Article Search API](https://developer.nytimes.com/article_search_v2.json).
+`NYTimesArticleAPI` is a Python wrapper for the [New York Times Article Search API][1]. Based on the excellent [`requests`][13] package, it provides full support for all of the API's search parameters, and also allows access to the request object itself for debugging purposes.
   
 
 ## Installation
@@ -12,7 +12,7 @@ With pip:
 
 ## Dependencies
 
-NYTimesArticleAPI requires the [`requests`](https://pypi.python.org/pypi/requests) and [`setuptools`](https://pypi.python.org/pypi/setuptools) packages.
+NYTimesArticleAPI requires the [`requests`][2] and [`setuptools`][3] packages.
 
 
 ## Usage
@@ -32,7 +32,7 @@ Then call the `search` function with your desired search parameters/values:
                               "source": ["Reuters", 
                                          "AP", 
                                          "The New York Times"]}, 
-                          begin_date="20161023", # this can also be an int
+                          begin_date="20161001", # this can also be an int
                           facet_field=["source", "day_of_week"], 
                           facet_filter=True)
 ```
@@ -43,32 +43,54 @@ You can specify multiple filters by using a dictionary::
 
 ```python
 >>> fq = {"headline": "Obama", "source": ["Reuters", "AP", "The New York Times"]}
+>>> articles = api.search(q="Obama", fq=fq)
 ```
 
 And multiple values by using a list::
 
 ```python
 >>> facet_field = ["source", "day_of_week"]
+>>> articles = api.search(q="Obama", facet_field=facet_field)
 ```
 
 More examples:
 
 ```python
+# simple search
 >>> articles = api.search(q="Obama")
-
->>> articles = api.search(q="Obama", begin_date="20111231", page=2)
+# search between specific dates
+>>> articles = api.search(q="Obama", begin_date="20161001", end_date="20161020", page=2)
+# access most recent request object
+>>> headers = api.req.headers
 ```
 
-For a complete overview of the available search parameters, please refer to the [NYTimes Article Search API Documentation](http://developer.nytimes.com/docs/read/article_search_api_v2).
+For a complete overview of the available search parameters, please refer to the [NYTimes Article Search API Documentation][4].
 
 
 ## History
 
-This package was originally written by [Evan Sherlock](https://github.com/evansherlock) as [`nytimesarticle`](https://github.com/evansherlock/nytimesarticle). It has since been forked and updated by [Matt Morrison](https://github.com/MattDMo), and subsequently released as [`NyTimesArticleAPI`](https://pypi.python.org/pypi/NYTimesArticleAPI), with contributions from [Gerald Spencer](https://github.com/Geethree) and [Andrew Han](https://github.com/handrew).
+This package was originally written by [Evan Sherlock][5] as [`nytimesarticle`][6]. It has since been forked and updated by [Matt Morrison][7], and subsequently released as [`NyTimesArticleAPI`][8], with contributions from [Gerald Spencer][9] and [Andrew Han][10].
 
 
 ## License
 
 &copy; 2016 Matt Morrison <mattdmo@pigimal.com>.
 
-This is free software. It is licensed under the [MIT License](http://opensource.org/licenses/MIT). Feel free to use this in your own work. However, if you modify and/or redistribute it, please attribute me in some way, and distribute your work under this or a similar license. A shout-out or a beer would be appreciated.
+This is free software. It is licensed under the [MIT License][11]. Feel free to use this in your own work. However, if you modify and/or redistribute it, please attribute me in some way, and distribute your work under this or a similar license. A shout-out or a beer would be appreciated.
+
+You can support development of this project on [Gratipay][12].
+
+
+  [1]: https://developer.nytimes.com/article_search_v2.json
+  [2]: https://pypi.python.org/pypi/requests
+  [3]: https://pypi.python.org/pypi/setuptools
+  [4]: http://developer.nytimes.com/docs/read/article_search_api_v2
+  [5]: https://github.com/evansherlock
+  [6]: https://github.com/evansherlock/nytimesarticle
+  [7]: https://github.com/MattDMo
+  [8]: https://pypi.python.org/pypi/NYTimesArticleAPI
+  [9]: https://github.com/Geethree
+  [10]: https://github.com/handrew
+  [11]: http://opensource.org/licenses/MIT
+  [12]: https://www.gratipay.com/on/github/MattDMo/
+  [13]: http://docs.python-requests.org
