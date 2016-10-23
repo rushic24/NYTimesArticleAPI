@@ -1,7 +1,5 @@
 # NYTimesArticleAPI
 
----
-  
 `NYTimesArticleAPI` is a fully-functional Python wrapper for the [New York Times Article Search API](https://developer.nytimes.com/article_search_v2.json).
   
 
