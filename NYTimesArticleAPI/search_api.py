@@ -26,26 +26,9 @@ class articleAPI(object):
         if self.key is None:
             raise NoAPIKeyException('Warning: Missing API Key. Please visit ' + API_SIGNUP_PAGE + ' to register for a key.')
 
-    def _utf8_encode(self, d):
-        """
-        Ensures all values are encoded in UTF-8 and converts them to lowercase
-
-        """
-        for k, v in d.items():
-            if isinstance(v, str):
-                d[k] = v.encode('utf8').lower()
-            if isinstance(v, list):
-                for index,item in enumerate(v):
-                    item = item.encode('utf8').lower()
-                    v[index] = item
-            if isinstance(v, dict):
-                d[k] = self._utf8_encode(v)
-
-        return d
-
     def _bool_encode(self, d):
         """
-        Converts bool values to lowercase strings
+        Converts boolean values to lowercase strings
 
         """
         for k, v in d.items():
@@ -74,7 +57,6 @@ class articleAPI(object):
             values = ' AND '.join(values)
             return values
 
-        kwargs = self._utf8_encode(kwargs)
         kwargs = self._bool_encode(kwargs)
 
         values = ''
