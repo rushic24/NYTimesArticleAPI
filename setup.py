@@ -3,15 +3,15 @@ ez_setup.use_setuptools() # in case users don't have setuptools installed
 
 from setuptools import setup
 
-import NYTimesArticleAPI
+import nytimesarticlev2
 
 setup(
-    name="NYTimesArticleAPI",
+    name="nytimesarticlev2",
     description="Python wrapper for the New York Times Article Search API",
-    version=NYTimesArticleAPI.__version__,
-    author=NYTimesArticleAPI.__author__,
-    author_email="mattdmo@pigimal.com",
-    url="https://github.com/MattDMo/NYTimesArticleAPI",
+    version=nytimesarticlev2.__version__,
+    author=nytimesarticlev2.__author__,
+    author_email="rushic24@gmail.com",
+    url="https://github.com/rushic24/nytimesarticlev2",
     license="MIT",
     long_description=open("README.rst").read(),
     classifiers=[
@@ -19,8 +19,6 @@ setup(
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.2",
         "Programming Language :: Python :: 3.3",
@@ -35,9 +33,9 @@ setup(
         "requests >= 2.7.0",
     ],
     packages=[
-        "NYTimesArticleAPI",
+        "nytimesarticlev2",
     ],
     keywords="nytimes new york times api article search nyt journalism news",
-    test_suite="NYTimesArticleAPI.tests.NYTimesArticleAPITests",
+    test_suite="nytimesarticlev2.tests.nytimesarticlev2Tests",
     zip_safe=True,
 )

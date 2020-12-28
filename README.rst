@@ -1,7 +1,7 @@
-NYTimesArticleAPI
+nytimesarticlev2
 =================
 
-``NYTimesArticleAPI`` is a fully-functional Python wrapper for the `New
+``nytimesarticlev2`` is a fully-functional Python wrapper for the `New
 York Times Article Search
 API <https://developer.nytimes.com/article_search_v2.json>`__.
 
@@ -12,12 +12,12 @@ With pip:
 
 ::
 
-    $ pip install NYTimesArticleAPI
+    $ pip install nytimesarticlev2
 
 Dependencies
 ------------
 
-NYTimesArticleAPI requires the
+nytimesarticlev2 requires the
 ```requests`` <https://pypi.python.org/pypi/requests>`__ and
 ```setuptools`` <https://pypi.python.org/pypi/setuptools>`__ packages.
 
@@ -28,7 +28,7 @@ Simply import and initialize the API with your developer key:
 
 .. code:: python
 
-    >>> from NYTimesArticleAPI import articleAPI
+    >>> from nytimesarticlev2 import articleAPI
     >>> api = articleAPI("YourAPIKey")
 
 Then call the ``search`` function with your desired search
@@ -79,7 +79,7 @@ Sherlock <https://github.com/evansherlock>`__ as
 ```nytimesarticle`` <https://github.com/evansherlock/nytimesarticle>`__.
 It has since been forked and updated by `Matt
 Morrison <https://github.com/MattDMo>`__, and subsequently released as
-```NyTimesArticleAPI`` <https://pypi.python.org/pypi/NYTimesArticleAPI>`__,
+```NyTimesArticleAPI`` <https://pypi.python.org/pypi/nytimesarticlev2>`__,
 with contributions from `Gerald Spencer <https://github.com/Geethree>`__
 and `Andrew Han <https://github.com/handrew>`__.
 

@@ -359,10 +359,11 @@ def _resolve_version(version):
     with contextlib.closing(resp):
         try:
             charset = resp.info().get_content_charset()
+            reader = codecs.getreader(charset)
         except Exception:
             # Python 2 compat; assume UTF-8
             charset = 'UTF-8'
-        reader = codecs.getreader(charset)
+            reader = codecs.getreader(charset)
         doc = json.load(reader(resp))
 
     return str(doc['info']['version'])

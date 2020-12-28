@@ -1,18 +1,18 @@
-# NYTimesArticleAPI
+# nytimesarticlev2
 
-`NYTimesArticleAPI` is a Python wrapper for the [New York Times Article Search API][1]. Based on the excellent [`requests`][13] package, it provides full support for all of the API's search parameters, and also allows access to the request object itself for debugging purposes.
+`nytimesarticlev2` is a Python wrapper for the [New York Times Article Search API][1]. Based on the excellent [`requests`][13] package, it provides full support for all of the API's search parameters, and also allows access to the request object itself for debugging purposes.
   
 
 ## Installation
 
 With pip:
 
-    $ pip install NYTimesArticleAPI
+    $ pip install nytimesarticlev2
 
 
 ## Dependencies
 
-NYTimesArticleAPI requires the [`requests`][2] and [`setuptools`][3] packages.
+nytimesarticlev2 requires the [`requests`][2] and [`setuptools`][3] packages.
 
 
 ## Usage
@@ -20,7 +20,7 @@ NYTimesArticleAPI requires the [`requests`][2] and [`setuptools`][3] packages.
 Simply import and initialize the API with your developer key:
 
 ```python
->>> from NYTimesArticleAPI import articleAPI
+>>> from nytimesarticlev2 import articleAPI
 >>> api = articleAPI("YourAPIKey")
 ```
 
@@ -88,7 +88,7 @@ You can support development of this project on [Gratipay][12].
   [5]: https://github.com/evansherlock
   [6]: https://github.com/evansherlock/nytimesarticle
   [7]: https://github.com/MattDMo
-  [8]: https://pypi.python.org/pypi/NYTimesArticleAPI
+  [8]: https://pypi.python.org/pypi/nytimesarticlev2
   [9]: https://github.com/Geethree
   [10]: https://github.com/handrew
   [11]: http://opensource.org/licenses/MIT

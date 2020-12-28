@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+README.rst
+setup.cfg
+setup.py
+nytimesarticlev2/__init__.py
+nytimesarticlev2/nytapi.py
+nytimesarticlev2/search_api.py
+nytimesarticlev2/tests.py
+nytimesarticlev2.egg-info/PKG-INFO
+nytimesarticlev2.egg-info/SOURCES.txt
+nytimesarticlev2.egg-info/dependency_links.txt
+nytimesarticlev2.egg-info/requires.txt
+nytimesarticlev2.egg-info/top_level.txt
+nytimesarticlev2.egg-info/zip-safe
