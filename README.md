@@ -69,7 +69,7 @@ For a complete overview of the available search parameters, please refer to the 
 
 ## History
 
-This package was originally written by [Evan Sherlock][5] as [`nytimesarticle`][6]. It has since been forked and updated by [Matt Morrison][7], and subsequently released as [`NyTimesArticleAPI`][8], with contributions from [Gerald Spencer][9] and [Andrew Han][10].
+This package was originally written by [Evan Sherlock][5] as [`nytimesarticle`][6]. It has since been forked and updated by [Matt Morrison][7], and subsequently released as [`NyTimesArticleAPI`][8], with contributions from [Gerald Spencer][9] and [Andrew Han][10]. Which I further updated to nytimesarticlev2.
 
 
 ## License
